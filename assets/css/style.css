@@ -24,7 +24,6 @@ Header Styles
 */
 .header {
     position: fixed;
-    background-color: red;
     width: 100vw;
     display: flex;
     justify-content: center;
@@ -54,9 +53,48 @@ Header Styles
     font-weight: 300;
 }
 
-.menu-itens a:last-child {
+.container .menu-itens a:last-child, .home a{
     background-color: #a8a6a1;
     padding: 18px 30px;
-    font-weight: 500;
     border-radius: 6px;
+    font-weight: 500;
+    transition: 0.5s;
 }
+
+.container .menu-itens a:last-child:hover, .home a:hover{
+    opacity: 0.8;
+}
+
+/*
+======
+Home Styles
+======
+*/
+.main .home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-image: url("/assets/img/home.jpg");
+    height: 100vh;
+    color: white;  
+}
+
+.home .card {
+    gap: 20px;
+    text-align: center;
+}
+
+.card h4 {
+    font-size: 19.2px;
+    margin: 20px 0;
+}
+
+.card #title {
+    font-size: 60px;
+}
+
