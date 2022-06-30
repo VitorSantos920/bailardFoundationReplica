@@ -3,9 +3,60 @@
 Global Styles
 ======
 */
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+a { text-decoration: none; color: unset; }
+
+ul {list-style: none;}
+
+body { font-family: 'Poppins', sans-serif; }
+
+/*
+======
+Header Styles
+======
+*/
+.header {
+    position: fixed;
+    background-color: red;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    padding: 33px;
+    color: white;
+}
+
+.header > .container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    max-width: 1366px;
+}
+
+.logo {
+    font-size: 28px;
+}
+
+.menu-itens {
+    display: flex;
+    gap: 19px;
+    align-items: center;
+}
+
+.menu-itens a {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+.menu-itens a:last-child {
+    background-color: #a8a6a1;
+    padding: 18px 30px;
+    font-weight: 500;
+    border-radius: 6px;
+}
