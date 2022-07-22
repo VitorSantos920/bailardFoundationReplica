@@ -13,7 +13,7 @@ Global Styles
 
 a {
   text-decoration: none;
-  color: unset;
+  color: #ffffff;
 }
 
 ul {
@@ -44,7 +44,6 @@ Header Styles
   display: flex;
   justify-content: center;
   padding: 2.06em;
-  color: white;
 }
 
 .header > .container {
@@ -70,7 +69,8 @@ Header Styles
 }
 
 .container .menu-itens a:last-child,
-.home a {
+.home a,
+.content-org a {
   background-color: #a8a6a1;
   padding: 1.125em 1.875em;
   border-radius: 6px;
@@ -99,7 +99,7 @@ Home Styles
   background-repeat: no-repeat;
   background-image: url("/assets/img/home.jpg");
   height: 100vh;
-  color: white;
+  color: #ffffffff;
 }
 
 .home .card,
@@ -131,30 +131,54 @@ Home Styles
   font-size: 3em;
 }
 
-/*
-======
-Bio Styles
-======
-*/
-.bio {
+/* Seções */
+.bio,
+.organization,
+.action {
   display: flex;
-  flex-direction: column;
-  padding-top: 3.125em;
+  justify-content: center;
   align-items: center;
+  padding-top: 3.5em;
 }
 
-.content {
+.content-bio {
   max-width: 887px;
   text-align: center;
   padding: 0.1em;
 }
 
-.content .title {
+/* Título das Seções */
+.titleSec {
   font-size: 2.2em;
 }
 
-.content .description {
+/* Descrição das Seções */
+.description {
   margin-top: 2.5em;
   font-size: 1em;
   text-align: center;
+  line-height: 2em;
+}
+
+.organization,
+.action {
+  gap: 80px;
+}
+
+.banner img {
+  width: 100%;
+  height: 494px;
+}
+
+.content-org {
+  text-align: center;
+  width: 450px;
+}
+
+.content-org p {
+  margin: 1.2em 0 2.4em 0;
+}
+
+.content-org main a:hover {
+  opacity: 0.8;
 }
