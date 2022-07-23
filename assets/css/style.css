@@ -9,6 +9,9 @@ Global Styles
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  border: unset;
+  appearance: unset;
 }
 
 a {
@@ -18,10 +21,6 @@ a {
 
 ul {
   list-style: none;
-}
-
-body {
-  font-family: "Poppins", sans-serif;
 }
 
 @keyframes showAll {
@@ -70,16 +69,18 @@ Header Styles
 
 .container .menu-itens a:last-child,
 .home a,
-.content-org a {
+.content a,
+.sign .form input[type="submit"] {
   background-color: #a8a6a1;
   padding: 1.125em 1.875em;
   border-radius: 6px;
-  font-weight: 500;
+  font-weight: 700;
   transition: 0.5s;
 }
 
 .container .menu-itens a:last-child:hover,
-.home a:hover {
+.home a:hover,
+.sign .form input:hover {
   opacity: 0.8;
 }
 
@@ -131,35 +132,45 @@ Home Styles
   font-size: 3em;
 }
 
-/* Seções */
-.bio,
-.organization,
-.action {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 3.5em;
-}
-
 .content-bio {
   max-width: 887px;
   text-align: center;
   padding: 0.1em;
 }
 
-/* Título das Seções */
-.titleSec {
-  font-size: 2.2em;
+/* 
+========== 
+(Global Sections) -> Common Styles
+==========
+*/
+.bio,
+.organization,
+.action,
+.sign {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3.5em;
 }
 
-/* Descrição das Seções */
+.titleSec {
+  font-size: 2.2em;
+  font-weight: 600;
+}
+
 .description {
   margin-top: 2.5em;
   font-size: 1em;
   text-align: center;
   line-height: 2em;
+  color: rgb(94, 94, 94);
 }
 
+/* 
+========== 
+Organization & Action Styles
+==========
+*/
 .organization,
 .action {
   gap: 80px;
@@ -170,15 +181,73 @@ Home Styles
   height: 494px;
 }
 
-.content-org {
+.content {
   text-align: center;
   width: 450px;
 }
 
-.content-org p {
+.content p {
   margin: 1.2em 0 2.4em 0;
 }
 
-.content-org main a:hover {
+.content main a:hover {
   opacity: 0.8;
+}
+
+/* 
+========== 
+Sign Styles
+==========
+*/
+.sign {
+  margin-top: 3.5em;
+  padding-bottom: 3.5em;
+  text-align: center;
+  background-color: #f7f7f7;
+}
+
+.sign main {
+  width: 80vw;
+}
+
+.sign main p,
+form {
+  margin-top: 1.2em;
+}
+
+.sign form input:first-child {
+  border: rgba(128, 128, 128, 0.247) 1px solid;
+  outline: 0;
+  height: 66px;
+  width: 280px;
+  padding: 22px 32px;
+  font-size: 1em;
+  background-color: #ffffff;
+}
+
+.sign form input::placeholder {
+  opacity: 0.4;
+}
+
+.sign form input:last-child {
+  color: #ffffff;
+  height: 65px;
+  width: 164px;
+  letter-spacing: 1.3px;
+}
+
+.footer {
+  background-color: #38383b;
+  text-align: center;
+  padding: 2em;
+  color: #ffffff;
+  font-weight: 300;
+}
+
+.footer p {
+  margin: 1em 0;
+}
+
+.footer a {
+  text-decoration: underline;
 }
