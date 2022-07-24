@@ -23,6 +23,21 @@ a {
   color: #ffffff;
 }
 
+::-webkit-scrollbar {
+  width: 0.5em;
+  background-color: rgba(177, 176, 176, 0.61);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #38383b;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-button {
+  background-color: #38383b;
+  color: red;
+}
+
 ul {
   list-style: none;
 }
