@@ -47,6 +47,7 @@ Header Styles
   display: flex;
   justify-content: center;
   padding: 2.06em;
+  background-color: rgba(177, 176, 176, 0.61);
 }
 
 .header > .container {
@@ -68,7 +69,12 @@ Header Styles
 
 .menu-itens a {
   font-size: 1em;
-  font-weight: 300;
+  font-weight: bolder;
+  letter-spacing: 2px;
+}
+
+.menu-itens a:hover {
+  text-decoration: underline;
 }
 
 .container .menu-itens a:last-child,
@@ -103,7 +109,7 @@ Home Styles
   /* background */
   background-size: cover;
   background-position: center;
-  background-image: url("/assets/img/home.jpg");
+  background-image: url("../img/home.jpg");
   height: 100vh;
   color: #ffffffff;
 }
@@ -156,7 +162,7 @@ Home Styles
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-top: 3.5em;
+  padding-top: 4em;
 }
 
 .titleSec {
@@ -181,7 +187,7 @@ Organization & Action Styles
 .action,
 .bio {
   margin: 0 20px 0 20px;
-  gap: 20px;
+  gap: 5em;
 }
 
 .banner img {
@@ -264,4 +270,50 @@ Footer Styles
 
 .footer a {
   text-decoration: underline;
+}
+
+/* 
+========== 
+Responive
+==========
+*/
+@media screen and (max-width: 770px) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .header {
+    padding: 1em;
+  }
+
+  .menu-itens a:last-child {
+    font-size: 0.7em;
+  }
+}
+@media screen and (max-width: 660px) {
+  .content {
+    width: 100%;
+  }
+
+  .organization,
+  .action {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .action .banner {
+    order: 1;
+  }
+
+  .action .content {
+    order: 2;
+  }
+
+  .bio,
+  .organization,
+  .action {
+    margin: 0 10px 0 10px;
+  }
 }
