@@ -63,6 +63,11 @@ Header Styles
   justify-content: center;
   padding: 2.06em;
   z-index: 99;
+  transition: 1s;
+}
+
+.bg-gray {
+  background-color: rgba(85, 85, 85, 0.616);
 }
 
 .header > .container {
@@ -88,7 +93,7 @@ Header Styles
   letter-spacing: 2px;
 }
 
-.menu-itens a:hover {
+.menu-itens a:not(:last-child):hover {
   text-decoration: underline;
 }
 
@@ -181,7 +186,9 @@ Article Card Styles
   align-items: center;
   justify-content: center;
   padding: 1.3em;
+  cursor: pointer;
   gap: 1.6em;
+  z-index: 1;
 }
 
 .card-template > .logo-img img {
@@ -280,11 +287,11 @@ Sign Styles
 }
 
 .sign main p,
-form {
+.form {
   margin-top: 1.2em;
 }
 
-.sign form input:first-child {
+.sign .form input:first-child {
   border: rgba(128, 128, 128, 0.247) 1px solid;
   outline: 0;
   height: 66px;
@@ -294,11 +301,11 @@ form {
   background-color: #ffffff;
 }
 
-.sign form input::placeholder {
+.sign .form input::placeholder {
   opacity: 0.4;
 }
 
-.sign form input:last-child {
+.sign .form input:last-child {
   color: #ffffff;
   height: 65px;
   width: 164px;
@@ -370,4 +377,30 @@ Responive
   .action {
     margin: 0 10px 0 10px;
   }
+}
+
+@media screen and (max-width: 560px) {
+  .form input[type="email"] {
+    margin-bottom: 1em;
+  }
+}
+
+/* 
+========== 
+Animation
+==========
+*/
+
+[data-animation] {
+  opacity: 0;
+  transition: 1s;
+}
+
+[data-animation="bottom"] {
+  transform: translateY(10px);
+}
+
+[data-animation].animate {
+  opacity: 1;
+  transform: translateY(0);
 }
