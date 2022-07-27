@@ -18,6 +18,8 @@ Utilizando um template disponibilizado pela Squarespace (https://pt.squarespace.
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" height="60" width="90" alt="javascript logo"  /> JS: Interatividade e Efeitos.
 </div>
 
+**_Deploy: https://vitorsantos920.github.io/bailardFoundationReplica/_**
+
 ## **_Imagem do Projeto_**
 
 <img src="assets/img/imgToGithub.png">
